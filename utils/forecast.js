@@ -12,7 +12,10 @@ const forecast = (latitude, longitude, callback) => {
     } else {
       const {weather_descriptions, temperature, feelslike} = body.current
 
-      callback(undefined, `Está ${weather_descriptions} em ${body.location.region}, com uma temperatura de ${temperature} ºC e uma sensacao de ${feelslike} ºC`)
+      callback(
+        undefined, `Está ${weather_descriptions} em ${body.location.region},`
+        `com uma temperatura de ${temperature} ºC e uma sensacao de ${feelslike} ºC`
+      )
     }
   })
 }
